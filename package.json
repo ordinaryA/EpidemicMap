@@ -9,6 +9,7 @@
   },
   "dependencies": {
     "axios": "^0.27.2",
+    "echarts": "4.9.0",
     "sass": "^1.52.0",
     "vue": "^3.2.25"
   },

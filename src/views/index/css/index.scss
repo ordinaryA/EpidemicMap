@@ -4,8 +4,27 @@
     justify-content: center;
 }
 
+.JWSR {
+    color: #8b392d;
+}
+.WZZGR {
+    color: #e6ba83;
+}
+.XYQZ {
+    color: #71464e;
+}
+.LJQZ {
+    color: #b66e67;
+}
+.LZSW {
+    color: #2b3339;
+}
+.LJZY {
+    color: #64968b;
+}
+
 .index {
-    background-color: #000;
+    background-color: #f5f5f5;
     min-height: 100vh;
 
     &__top {
@@ -29,7 +48,7 @@
         border-radius: 0.5rem;
         color: #333;
         overflow: hidden;
-        box-shadow: 0 0.2rem 1.1rem rgba($color: #fff, $alpha: 0.3);
+        box-shadow: 0 0.2rem 1.1rem rgba($color: #fff, $alpha: 0.5);
 
         &--tabs {
             display: flex;
@@ -60,14 +79,29 @@
                 flex-direction: column;
                 margin: 0.4rem 0;
 
+                h4 {
+                    color: #41444a;
+                }
+
                 &__num {
-                    padding: 0.4rem 0;
+                    padding: 0.2rem 0;
+                    font-weight: bold;
+                    font-size: 18px;
                 }
 
                 .prev-day {
-                    font-weight: bold;
                     padding-right: 5px;
+                    color: #6d6f73;
                 }
+
+                .prev-nums {
+                    font-size: 12px;
+                }
+            }
+
+            .end-date {
+                color: #aaa;
+                padding: 0.5rem 1rem 0;
             }
         }
     }
