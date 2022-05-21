@@ -1,0 +1,74 @@
+@mixin flex-center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.index {
+    background-color: #000;
+    min-height: 100vh;
+
+    &__top {
+        color: #fff;
+        position: relative;
+        background: url("../img/bg.jpg") no-repeat center top/cover;
+        padding: 2rem 1rem 5rem;
+
+        &--title {
+            position: relative;
+        }
+    }
+
+    &__cards {
+        width: calc(100% - 2rem);
+        position: absolute;
+        top: 116px;
+        left: 50%;
+        transform: translateX(-50%);
+        background: #fff;
+        border-radius: 0.5rem;
+        color: #333;
+        overflow: hidden;
+        box-shadow: 0 0.2rem 1.1rem rgba($color: #fff, $alpha: 0.3);
+
+        &--tabs {
+            display: flex;
+            height: 50px;
+
+            .tab-item {
+                @include flex-center();
+                height: 100%;
+                flex: 0 0 50%;
+                background: #efefef;
+                font-weight: bold;
+                cursor: pointer;
+
+                &.active {
+                    background: #fff;
+                }
+            }
+        }
+
+        &--info {
+            display: flex;
+            flex-wrap: wrap;
+            padding: 0.5rem 0;
+
+            .info-item {
+                flex: 0 0 33%;
+                @include flex-center();
+                flex-direction: column;
+                margin: 0.4rem 0;
+
+                &__num {
+                    padding: 0.4rem 0;
+                }
+
+                .prev-day {
+                    font-weight: bold;
+                    padding-right: 5px;
+                }
+            }
+        }
+    }
+}
