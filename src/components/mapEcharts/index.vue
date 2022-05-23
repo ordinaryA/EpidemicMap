@@ -26,7 +26,7 @@ interface Idata {
 export default {
   props: ["chinaData"],
   setup(props: any) {
-    type EChartsOption = echarts.EChartsOption;
+    type EChartOption = echarts.EChartOption;
 
     const data = reactive<Idata>({
       map1Item: {},
@@ -69,7 +69,7 @@ export default {
 
     const initialMap = () => {
       const map1: HTMLElement | null = document.getElementById("map1");
-      const myMap = echarts.init(map1 as HTMLElement);
+      const myMap = echarts.init(map1 as HTMLCanvasElement);
       myMap.showLoading();
       data.map1Item = myMap;
       echarts.registerMap("china", chinaJson as any);
